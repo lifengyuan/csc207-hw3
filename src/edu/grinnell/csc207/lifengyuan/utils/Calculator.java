@@ -1,7 +1,12 @@
 package edu.grinnell.csc207.lifengyuan.utils;
 
 /**
- * Citation:
+ * csc207 Assignment 3
+ * 
+ * @author Fengyuan Li
+ * @date Feb 5, 2014
+ * 
+ * @Citation:
  * The reference library for BigInteger from online at:
  * http://docs.oracle.com/javase/7/docs/api/java/util/BigInteger.html
  * The use of ArithmeticException and IllegalArgumentException for 
@@ -9,8 +14,8 @@ package edu.grinnell.csc207.lifengyuan.utils;
  * #divide%28java.math.BigDecimal%29
  * I got point for the BigInteger class from Earnest Wheeler for eva10.
  * Testing case from online at:
- *http://www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2014S/
- *assignments/assignment.03.html
+ * http://www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2014S/
+ * assignments/assignment.03.html
  */
 
 import java.math.BigInteger;
