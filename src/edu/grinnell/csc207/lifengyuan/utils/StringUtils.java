@@ -4,6 +4,7 @@ package edu.grinnell.csc207.lifengyuan.utils;
  * CSC 207 Assignment 3
  * 
  * @author Fengyuan Li
+ * @date Feb 5, 2014
  * 
  * Citation:
  * Testing case from online at:
@@ -29,22 +30,23 @@ public class StringUtils {
 		char[] charArray = str.toCharArray();
 		String cur = "";
 		// create a list of strings to turn into arrays
-		ArrayList<String> list = new ArrayList<String>();
+		ArrayList<String> split = new ArrayList<String>();
 
 		for (int i = 0; i < str.length(); i++) {
 			if (charArray[i] == c) {
-				list.add(cur);
+				split.add(cur);
 				cur = "";
 			} else
 				cur = cur + charArray[i];
 
 		}
-		list.add(cur);
+		split.add(cur); //add the end of sustring into the charArray.
 
-		String[] strArray = (String[]) list.toArray(new String[list.size()]);
+		String[] strArray = (String[]) split.toArray(new String[split.size()]);
+		//convert the charArray into a strArray
 
 		return strArray;
-	}// splitAt
+	}// splitAt(String str, char c)
 
 	/*
 	 * splitCSV splits a string using those policies, with a comma as the
@@ -63,9 +65,9 @@ public class StringUtils {
 			if (charArray[i] == '"') {
 				count = 1;
 				i++;
-				// If the next character is quote too...
+				// If the next character is quote too
 				if (charArray[i] == '"') {
-					// If it is a double-quote, then reset count to 0 and move
+					// If it is a double-quote, then reset count to 0 then move
 					// on
 					count = 0;
 				}
@@ -177,15 +179,16 @@ public class StringUtils {
 			}// else
 		}// while
 
-		String base = name.substring(position); // take the name starting at
-												// position
+		String sub = name.substring(position); // take the name starting at
+							// position
 
 		// Finally, we create the verse
-		String verse = name + "!\n" + name + ", " + name + " bo B" + base
-				+ " Bonana fanna fo F" + base + "\nFee fy mo M" + base + ", "
-				+ name + "!";
+		String verse = name + "!\n" + name + ", " + name + " bo B" 
+		               + sub + " Bonana fanna fo F" 
+		               + sub + "\nFee fy mo M" 
+		               + sub + ", " + name + "!";
 
 		return verse;
-	}// nameGame(String)
+	}// nameGame(String name)
 
-}
+}// stringUtils
